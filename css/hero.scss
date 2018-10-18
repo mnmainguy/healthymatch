@@ -1,0 +1,11 @@
+.neal-hero.jumbotron {
+  h1 { margin-bottom: 1.5rem; font-weight: 600;}
+  h5 { margin-bottom: 1.5rem; font-weight: 600;}
+  background-color: $neal-hero-bg-color;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: Center center;
+  color: $neal-hero-text-color;
+  margin-bottom: $neal-section-padding-y/2;
+  background-repeat: no-repeat;  
+}
