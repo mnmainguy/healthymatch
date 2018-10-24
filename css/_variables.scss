@@ -51,7 +51,7 @@ $neal-footer-social-icon-bg-color: $gray-lighter !default;
 $neal-code-padding: 1rem 1.5rem !default;
 
 // Section Component
-$neal-section-padding-y: 10rem !default;
+$neal-section-padding-y: 5rem !default;
 $neal-section-heading-margin-bottom: 2rem !default;
 $neal-section-border-bottom: 1px solid $gray-lightest !default;;
 $neal-subhero-bg-color: $gray-uberlight !default;;
@@ -59,16 +59,16 @@ $neal-subhero-bg-color: $gray-uberlight !default;;
 // Navbar Component
 $neal-navbar-bg-color: #fff !default;
 $neal-navbar-padding-y: 1rem !default;
-$neal-navbar-link-color: #666 !default;
+$neal-navbar-link-color: #244c8e !default;
 $neal-header-link-color-hover: darken($neal-navbar-link-color, 25%) !default;
-$neal-navbar-brand-color: #333 !default;
+$neal-navbar-brand-color: #244c8e !default;
 $neal-navbar-item-padding-x: 1.5rem !default;
 
 // Hero Component
 $neal-hero-padding-y: 10rem !default;
 $neal-hero-margin-bottom: $neal-section-padding-y/2 !default;
 $neal-hero-bg-color: #263238 !default;
-$neal-hero-text-color: #313332 !default;
+$neal-hero-text-color: #fff !default;
 
 // Horizontal Split: 
 $neal-horizontal-split-padding-x-sm: 0rem !default;

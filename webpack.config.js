@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'production',
   entry: ["./js/app.jsx", "./css/main.scss"],
   output: {
     path: "/home/mmainguy/git/healthymatch/public/js",

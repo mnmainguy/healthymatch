@@ -1,5 +1,8 @@
 .neal-signup-inline {
   input.form-control { width: 100% };
-  button[type=submit] { display: block; min-width: 100%; }
+  button[type=submit] { display: block; min-width: 100%;margin-top: 1rem}
   margin-bottom: $neal-page-paragraph-margin;
+  .form-group {padding: 1rem; text-align: left};
+  .form-control{padding: 0rem 1rem};
+  .row{display: flex}
 }

@@ -15,7 +15,7 @@ export class Navbar extends React.Component {
         <nav className={_className}>
           <div className="container">
             <a className="navbar-brand hidden-sm-down" href="#">
-              <img src={this.props.brandImage} width="200" height="50" alt=""></img>
+              <img className="d-inline-block align-top" src={this.props.brandImage} width="240" height="40" alt=""></img>
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
               data-target="#mobile-nav" aria-controls="mobile-nav" 

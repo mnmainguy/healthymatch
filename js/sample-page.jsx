@@ -17,7 +17,7 @@ import { Team, TeamMember } from "./components/team.jsx";
 import Select from "react-select";
 import { HashLink } from 'react-router-hash-link';
 
-const brandName = "Healthy Match";
+const brandName = "healthUnsurance";
 const brandImage = "img/Logo.png";
 
 const onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
@@ -90,12 +90,12 @@ export default (props) => {
          </NavItem> */}
       </Navbar>
 
-      <Hero backgroundImage="img/money.jpg"
+      <Hero backgroundImage="img/yoga.jpg"
         className="img-responsive">
         <h1 className="display-4 text-center"> Get healthy on your own terms. </h1>
         <h5 className="display-5 text-center">Find and schedule appointments with high quality medical providers at a low, up-front cost.</h5>
         <p className="text-center">
-          <HashLink to="/pathLink#signUp" className="btn btn-dark">Compare prices now</HashLink>
+          <HashLink to="/pathLink#signUp" className="btn btn-light">Compare prices now</HashLink>
         </p>
       </Hero>
 
@@ -150,8 +150,8 @@ export default (props) => {
 
       <Footer brandName={brandName}
         facebookUrl="http://www.facebook.com"
-        twitterUrl="http://www.twitter.com/dennybritz"
-        githubUrl="https://github.com/mnmainguy/healthymatch"
+        twitterUrl="http://www.twitter.com"
+        githubUrl="https://github.com/mnmainguy/healthUnsurance"
         // address={businessAddress}
         >
       </Footer>
