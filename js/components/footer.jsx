@@ -19,20 +19,13 @@ export class Footer extends React.Component {
       <footer className="neal-footer navbar">
         <Container>
           <Row>
-            <Col size={["xs-12", "md-4"]}>
               <p className="neal-footer-copyright">
-                © {new Date().getFullYear()}, {this.props.brandName}
+                © {new Date().getFullYear()},&nbsp;
               </p>
               {this.props.address}
-              <p>
-                 <a href={`mailto:${this.props.email}`}>{this.props.email}</a>
-              </p>
-            </Col>
-            <Col size={["xs-12", "md-4"]}>
-            </Col>
-            <Col size={["xs-12", "md-4"]}>
+          </Row>
+          <Row>
               {this.renderSocialIcons()}
-            </Col>
           </Row>
         </Container>
       </footer>
@@ -41,10 +34,16 @@ export class Footer extends React.Component {
 
   renderSocialIcons() {
     return (
-      <ul className="nav navbar-nav neal-footer-social pull-right">
+      <ul className="nav navbar-nav neal-footer-social ">
+      <Col>
         { this.renderSocialIcon("fa-twitter", this.props.twitterUrl) }
+      </Col>
+      <Col>
         { this.renderSocialIcon("fa-facebook", this.props.facebookUrl) }
-        { this.renderSocialIcon("fa-github", this.props.githubUrl) }
+      </Col>
+      <Col>
+        { this.renderSocialIcon("fa-instagram", this.props.instagramUrl) }
+      </Col>
       </ul>
     );
   }

@@ -14,11 +14,13 @@ import { SignupInline } from "./components/signup-inline.jsx";
 import { SignupModal } from "./components/signup-modal.jsx";
 import { Stripe } from "./components/vendor/stripe.jsx";
 import { Team, TeamMember } from "./components/team.jsx";
+import { Graph } from "./components/graph.jsx";
 import Select from "react-select";
 import { HashLink } from 'react-router-hash-link';
 
-const brandName = "healthUnsurance";
+const brandName = "HealthUnsurance";
 const brandImage = "img/Logo.png";
+const email =  "healthunsurance@gmail.com";
 
 const onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
   name: "Stripe Integration Included",
@@ -31,9 +33,8 @@ const onSignup = ({ name: name, email: email, password: password }) => Stripe.St
 const businessAddress = (
   <address>
     <strong>{brandName}</strong><br/>
-    1337 Market Street, Suite 1337<br/>
-    San Francisco, CA 94103<br/>
-    +1 (123) 456-7890
+    New York, NY 10003<br/>
+    <a href={`mailto:${email}`}>{email}</a>
   </address>
 );
 
@@ -92,67 +93,54 @@ export default (props) => {
 
       <Hero backgroundImage="img/yoga.jpg"
         className="img-responsive">
-        <h1 className="display-4 text-center"> Get healthy on your own terms. </h1>
+        <h1 className="display-4 text-center"> Stop overpaying for healthcare. </h1>
         <h5 className="display-5 text-center">Find and schedule appointments with high quality medical providers at a low, up-front cost.</h5>
         <p className="text-center">
           <HashLink to="/pathLink#signUp" className="btn btn-light">Compare prices now</HashLink>
         </p>
       </Hero>
 
-      <Section className="subhero">
-        <ImageList centered>
-          <ImageListItem src="img/press/cnn-logo.png" url="http://www.cnn.com"/>
-          <ImageListItem src="img/press/forbes-logo.png" url="http://forbes.com/"/>
-          <ImageListItem src="img/press/theverge-logo.png" url="http://www.theverge.com/"/>
-          <ImageListItem src="img/press/techcrunch-logo.jpg" url="http://techcrunch.com/"/>
-        </ImageList>
-      </Section>
-
-      <Section>
+      <Section className="gray">
         <HorizontalSplit padding="md">
           <div>
-            <p className="lead">Batteries Included</p>
-            <p>Neal is based on <a href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a> and ships with navbar, hero, footer, sections, horizontal split, pricing tables, customer quotes and other components you need for a landing page. No more repetitive coding! Oh, and it's easy to extend.</p>
+            <p className="h4">Save Money</p>
+            <p> Compare prices of hundreds of medical providers to ensure you get the best price for services that you pay for out of pocket. Credit, debit, and HSA payment options are available.</p>
           </div>
           <div>
-            <p className="lead">Third-Party Integrations</p>
-            <p>External integrations like &nbsp;
-              <a href="http://www.google.com/analytics/">Google Analytics</a>,&nbsp;
-              <a href="https://segment.com/">Segment</a>,&nbsp;
-              <a href="https://stripe.com/">Stripe</a> and&nbsp;
-              <a href="http://typeform.com">Typeform</a> are included.
-              No more copying & pasting integration code, all you need is your API keys. We automatically track events when visitors navigate to different parts of your page.</p>
+            <p className="h4">Save time</p>
+            <p> Book an appointment online instantly at a time that's convenient for you. Choose a location near your home or work. </p>
           </div>
           <div>
-            <p className="lead">Serverless Deployment</p>
-            <p>Because you are relying on react.js and third-party integration you don't need a server to host your landing page. Simply upload it to an Amazon S3 bucket, enable website hosting, and it's ready to go!</p>
+            <p className="h4">Services offered</p>
+            <p> Most common outpatient imaging and lab medical services are currently offered including X-Rays, Mammograms, CT scans, MRIs, blood tests, EKGs, and colonoscopies. </p>
           </div>
         </HorizontalSplit>
+        
+      </Section>
+
+      <Section >
+        <p className="h5 text-center">Example Savings</p>
+        <p className="text-center"> Save up to 45% on common medicial services when you book your appointment through HealthUnsurance. </p>
+        <img src="img/price_comparison.png"
+          className="img-fluid text-center">
+        </img>
         <div id= "signUp">  </div>
       </Section>
 
-      <Section heading="Sign-up" className="gray">
-        <p>Use these components to capture user data, display a payment dialog and/or send them to your own backend for handling. Of course, you could also just use a Typeform to collect user emails. </p>
+      <Section heading="Compare prices" className="gray">
+        <p> Select a medical service you need from the options below and enter your zip code to compare the prices of providers near you. Get a quote and book an appointment instantly. </p>
         <SignupInline onSubmit={onSignup}/>
         {/* <SignupModal modalId="signup-modal" onSubmit={onSignup}/>
         <p>
           <a className="btn btn-primary btn-ghost" data-toggle="modal" data-target="#signup-modal">Show Signup modal</a>
-        </p> */}
-      </Section>
-
-      <Section>
-        <PricingTable>
-          <PricingPlan {... pricingPlan1} />
-          <PricingPlan {... pricingPlan2} />
-          <PricingPlan {... pricingPlan3} />
-        </PricingTable>
+        </p>  */}
       </Section>
 
       <Footer brandName={brandName}
-        facebookUrl="http://www.facebook.com"
-        twitterUrl="http://www.twitter.com"
-        githubUrl="https://github.com/mnmainguy/healthUnsurance"
-        // address={businessAddress}
+        facebookUrl="https://www.facebook.com/HealthUnsurance"
+        twitterUrl="https://twitter.com/HUnsurance"
+        instagramUrl="https://www.instagram.com/healthunsurance"
+        address={businessAddress}
         >
       </Footer>
     </Page>

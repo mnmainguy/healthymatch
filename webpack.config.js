@@ -1,8 +1,10 @@
+const path = require('path');
+
 module.exports = {
   mode: 'production',
   entry: ["./js/app.jsx", "./css/main.scss"],
   output: {
-    path: "/home/mmainguy/git/healthymatch/public/js",
+    path: path.resolve(__dirname, "public/js"),
     publicPath: "/js",
     filename: "bundle.js"
   },

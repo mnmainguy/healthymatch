@@ -19,7 +19,7 @@ class ModalHeader extends React.Component {
           <span aria-hidden="true">&times;</span>
           <span className="sr-only">Close</span>
         </button>
-        <h4 className="modal-title lead">{this.props.title}</h4>
+        <h4 className="modal-title lead">Close</h4>
       </div>
     );
   }
@@ -32,13 +32,13 @@ class ModalFooter extends React.Component {
   };
 
   static defaultProps = {
-    buttonText: "Sign up",
+    buttonText: "Join our wait list",
   };
 
   render() {
     return (
       <div className="modal-footer">
-        <button type="submit" className="btn btn-primary btn-block btn-ghost">{this.props.buttonText}</button>
+        <button type="submit" className="btn btn-primary btn-block btn-ghost" data-dismiss="modal" aria-label="Close">{this.props.buttonText}</button>
       </div>
     );
   }
@@ -56,7 +56,7 @@ export class SignupModal extends React.Component {
 
   static defaultProps = {
     title: "Sign up",
-    buttonText: "Sign up",
+    buttonText: "Join our wait list",
     modalId: "signup-modal",
   };
 
@@ -75,9 +75,8 @@ export class SignupModal extends React.Component {
     if (this.props.children) return this.props.children;
     return (
       <div>
-        <SignupModal.Input name="name" required label="Name" placeholder="Name"/>
+        <p> We're sorry, HealthUnusrance is not yet available in your area. Please enter your email address below to be contacted when we launch in your city. </p>
         <SignupModal.Input type="email" required name="email" label="Email" placeholder="Email"/>
-        <SignupModal.Input type="password" required name="password" label="Password" placeholder="Password"/>
       </div>
     );
   };
