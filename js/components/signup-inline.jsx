@@ -7,10 +7,12 @@ import Row from "react-bootstrap/lib/Row"
 import { Formik } from "formik"
 import * as Yup from 'yup';
 import { SignupModal } from "./signup-modal.jsx";
+import request from "superagent";
 
 const zip = new RegExp("^[0-9]{5}(?:-[0-9]{4})?$");
 
 const schema = Yup.object().shape({
+  id: Yup.string(),
   services: Yup.string()
     .required()
     .test('service-test', 'Please select a service', 
@@ -19,16 +21,20 @@ const schema = Yup.object().shape({
     .matches(zip)
 });
 
+const uuidv4 = require('uuid/v4');
+var uuid4 = uuidv4();
+
 const SignupForm = () => (
   <div>
     <Formik
         validationSchema={schema}
         hanfleSubmit={SignupModal}
-        initialValues={{ services: '', zip: '' }}
+        initialValues={{ id: uuid4,services: '', zip: '' }}
         onSubmit={(values, { setSubmitting,resetForm }) => {
           setTimeout(() => {
             //alert(JSON.stringify(values, null, 2));
             <ModalToggle/>
+            PostData(values);
             setSubmitting(false); 
           }, 400);
       }}
@@ -104,8 +110,20 @@ function ModalToggle() {
   $('#signup-modal').bootstrapToggle();
 }
 
-export class SignupInline extends React.Component {
+function PostData(props) {
+  request.post('https://nzdhrpyam3.execute-api.us-east-1.amazonaws.com/default/HealthUnsuranceAPI')
+  .send({ id: {S: props.id}, service: {S: props.services}, zip: {N: props.zip} })
+  .end(function(err,res){
+    if(err){
+        console.log("Post error = ", err )
+    } else {
+        console.log("Post response = ", res.status)
+        console.log(res.body);
+    }
+});
+}
 
+export class SignupInline extends React.Component {
   render() {
     return (<SignupForm/>)
   }

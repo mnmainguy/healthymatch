@@ -1,8 +1,8 @@
 {
-  "name": "healthymatch",
+  "name": "healthunsurance",
   "version": "0.1.0",
   "description": "A sample launch page",
-  "repository": "https://github.com/mnmainguy/healthymatch",
+  "repository": "https://github.com/mnmainguy/healthUnsurance",
   "main": "js/app.js",
   "scripts": {
     "watch": "webpack --watch",
@@ -19,6 +19,8 @@
     "formik": "^1.3.1",
     "react-bootstrap": "^1.0.0-beta.1",
     "react-router-hash-link": "^1.2.0",
+    "superagent": "^4.0.0",
+    "uuid": "^3.3.2",
     "yup": "^0.26.6"
   },
   "devDependencies": {
