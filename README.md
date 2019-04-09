@@ -1,6 +1,6 @@
-# healthymatch Sample Page
+# HealthUnsurance Landing Page
 
-This is a sample page for [healthymatch](https://github.com/mnmainguy/healthymatch), reactjs components for building landing pages.
+This is a landing page for [HealthUnsurance](https://healthunsurance.com). HealthUnsurance is a marketplace to compare prices on outpatient medicial procedures for people who are paying out of pocket. It is built using React JS.
 
 
 ## Develop locally
@@ -14,13 +14,13 @@ npm install
 npm run watch
 ```
 
-Run with webpack:
+## Run with webpack:
 
 ```bash
 npm run serve
 ```
 
-Run inside a docker container:
+## Run inside a docker container:
 
 ```
 docker run -p 3000:80 -v "$PWD"/public:/usr/local/apache2/htdocs/ httpd:2.4
