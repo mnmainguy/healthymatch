@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+       - npm install
+       - npm run build
+artifacts:
+  files:
+    - '*/*'
+  name: healthunsurance-js
+  base-directory: public
+  secondary-artifacts:
+    lambda:
+      files:
+        - '*/*'
+      name: healthunsurance-lambda
+      discard-paths: yes
+      base-directory: lambda_functions
