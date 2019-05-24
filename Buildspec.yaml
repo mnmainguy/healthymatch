@@ -11,7 +11,7 @@ artifacts:
   name: healthunsurance-js
   base-directory: public
   secondary-artifacts:
-    lambda:
+    lambda_functions:
       files:
         - '*/*'
       name: healthunsurance-lambda
