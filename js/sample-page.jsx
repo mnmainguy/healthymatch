@@ -75,7 +75,7 @@ export default (props) => {
     <Page>
 
       <Navbar brandImage={brandImage}>
-        <NavItem dropdown={true}><HashLink to="/#signUp" className="nav-link">Sign up</HashLink></NavItem>
+        <NavItem dropdown={true}><HashLink to="#signUp" className="nav-link">Sign up</HashLink></NavItem>
         <NavItem dropdown={true}><Link to="Login" className="nav-link">Login</Link></NavItem>
         <NavItem dropdown={true}><Link to="Providers" className="nav-link">Providers</Link></NavItem>
         {/* <NavItem dropdown={true}> 

@@ -75,7 +75,7 @@ export class SignupModal extends React.Component {
     if (this.props.children) return this.props.children;
     return (
       <div>
-        <p> We're sorry, HealthUnusrance is not yet available in your area. Please enter your email address below to be contacted when we launch in your city. </p>
+        <p> We're sorry, Health Unsurance is not yet available in your area. Please enter your email address below to be contacted when we launch in your city. </p>
         <SignupModal.Input type="email" required name="email" label="Email" placeholder="Email"/>
       </div>
     );
