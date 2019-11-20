@@ -2,8 +2,8 @@ import React from "react";
 import Section from "./section.jsx";
 import { Col } from "../helpers/bootstrap.jsx";
 import PropTypes from "prop-types";
-import Form from "react-bootstrap/lib/Form"
-import Row from "react-bootstrap/lib/Row"
+import Form from "react-bootstrap/Form"
+import Row from "react-bootstrap/Row"
 import { Formik } from "formik"
 import * as Yup from 'yup';
 import { SignupModal } from "./signup-modal.jsx";

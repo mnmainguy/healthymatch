@@ -3,6 +3,9 @@ import SamplePage from "./sample-page.jsx";
 import ReactDOM from "react-dom";
 import { Router, IndexRoute, Route, Link, Redirect, browserHistory, BrowserRouter, Switch } from "react-router-dom";
 import { App } from "./components/app.jsx";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-126701382-1', { standardImplementation: true });
 
 class SampleApp extends React.Component {
   render() {
