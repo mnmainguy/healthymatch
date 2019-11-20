@@ -75,7 +75,7 @@ export default (props) => {
     <Page>
 
       <Navbar brandImage={brandImage}>
-        <NavItem dropdown={true}><HashLink to="/pathLink#signUp" className="nav-link">Sign up</HashLink></NavItem>
+        <NavItem dropdown={true}><HashLink to="/#signUp" className="nav-link">Sign up</HashLink></NavItem>
         <NavItem dropdown={true}><Link to="Login" className="nav-link">Login</Link></NavItem>
         <NavItem dropdown={true}><Link to="Providers" className="nav-link">Providers</Link></NavItem>
         {/* <NavItem dropdown={true}> 
@@ -96,7 +96,7 @@ export default (props) => {
         <h1 className="display-4 text-center"> Stop overpaying for healthcare. </h1>
         <h5 className="display-5 text-center">Find and schedule appointments with high quality medical providers at a low, up-front cost.</h5>
         <p className="text-center">
-          <HashLink to="/pathLink#signUp" className="btn btn-light">Compare prices now</HashLink>
+          <HashLink to="/#signUp" className="btn btn-light">Compare prices now</HashLink>
         </p>
       </Hero>
 
